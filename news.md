@@ -1,4 +1,5 @@
 NOVEMBER 2026
+05 NOV 2026 — TESTING BY ME IN ECHSREPO MAIN: THIS TESTING ON 5 NOV 115HRS USES ACTUAL ECHSHELP MAIN IN GITHUB WHICH WILL BE WHAT USERS WILL BE SEEING WHEN THEY VISIT THE NEW HHWEBSITE. UPLOAD OF NEWS IS BEING CHECKED USIN MD AND NEWS ENTRY HTL FILES ETC
 04 NOV 2026 — TRIAL RUN BY ME TO PUBLISH A NEWS ITEM: Using the draft manual this news is being published in new HH website; the steps are also being validated
 04 NOV 2026 — 4 NOV NEWS PUBLISHING TEST: 4 NOV This is a test of the new Helping Hands for ECHS NEWS publishing facility. The administrator can now enter news directly through the NEWS entry window
 ECHS NEWS: Monthly updates will be published here for all beneficiaries.
