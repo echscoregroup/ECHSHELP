@@ -3449,7 +3449,7 @@ loadPublicNews();
   const target=document.getElementById('hh-visitor-counter');
   if(!target)return;
   try{
-    const response=await fetch('https://helpinghandsforechs.goatcounter.com/counter/TOTAL.json',{cache:'no-store'});
+    const response=await fetch('https://helpinghandsforechs.goatcounter.com/counter//ECHSHELP.json',{cache:'no-store'});
     if(!response.ok)throw new Error('Counter unavailable');
     const data=await response.json();
     const count=Number(String(data.count||'0').replace(/,/g,''));
