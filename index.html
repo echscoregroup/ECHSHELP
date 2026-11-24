@@ -80,6 +80,234 @@ footer{background:var(--navy);color:#fff;padding:25px 5%;display:flex;justify-co
 @media(max-width:600px){.hh-tribute-row{gap:10px;width:98%;margin:12px auto 18px}.hh-jai-hind{font-size:clamp(20px,5vw,30px)}.hh-tribute-image-wrap{width:68%}}
 
 footer .footer-links #hh-visitor-counter{color:var(--gold);font-family:inherit;font-size:13px;font-weight:800;letter-spacing:.04em;white-space:nowrap}
+
+/* HH MOBILE RESPONSIVE CORRECTIONS — PASS 2
+   CSS-only mobile layout correction based on owner-provided phone screenshots.
+   Existing content, links, images, scripts and counter logic remain unchanged. */
+@media(max-width:620px){
+  .mast{
+    display:grid;
+    grid-template-columns:64px minmax(0,1fr) 64px;
+    grid-template-rows:auto auto auto auto auto;
+    column-gap:9px;
+    row-gap:7px;
+    align-items:center;
+    padding:12px 10px 14px;
+  }
+  .mast .logo{
+    grid-column:1;
+    grid-row:1 / span 3;
+    width:64px;
+    height:64px;
+    min-width:0;
+    border-radius:10px;
+  }
+  .mast .portrait{
+    grid-column:3;
+    grid-row:1 / span 3;
+    width:64px;
+    height:64px;
+    min-width:0;
+    border-radius:10px;
+  }
+  .mast .brand{display:contents}
+  .mast .brand h1{
+    grid-column:2;
+    grid-row:1;
+    min-width:0;
+    width:100%;
+    font-size:clamp(14px,3.8vw,17px);
+    line-height:1.18;
+    overflow-wrap:break-word;
+  }
+  .mast .brand .rule{
+    grid-column:2;
+    grid-row:2;
+    width:100%;
+    margin:2px 0;
+  }
+  .mast .brand .tag{
+    grid-column:2;
+    grid-row:3;
+    min-width:0;
+    font-size:clamp(8px,2.1vw,10px);
+    line-height:1.25;
+    overflow-wrap:break-word;
+  }
+  .mast .brand .sub{display:none}
+  .mast .photo-caption{
+    grid-column:3;
+    grid-row:4;
+    width:64px;
+    max-width:64px;
+    position:static;
+    left:auto;
+    transform:none;
+    margin:0;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    font-size:7px;
+    line-height:1.15;
+    text-align:center;
+  }
+  .mast .header-feedback{
+    grid-column:1 / -1;
+    grid-row:5;
+    display:block;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    margin:3px 0 0;
+    padding:8px 10px;
+    font-size:clamp(11px,3vw,13px);
+    line-height:1.35;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  nav{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px 6px;
+    padding:12px 10px;
+    justify-items:stretch;
+  }
+  nav a{
+    display:block;
+    min-width:0;
+    text-align:center;
+    font-size:clamp(10px,2.8vw,12px);
+    line-height:1.3;
+    padding:7px 2px;
+    overflow-wrap:anywhere;
+  }
+  nav a:last-child{
+    grid-column:1 / -1;
+    justify-self:center;
+    width:50%;
+  }
+  footer{
+    display:block;
+    padding:20px 14px;
+    text-align:center;
+  }
+  footer>strong{
+    display:block;
+    line-height:1.3;
+    margin-bottom:12px;
+  }
+  footer .footer-links{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    justify-items:center;
+    gap:12px;
+    width:100%;
+  }
+  footer .footer-links a,
+  footer .footer-links button,
+  footer .footer-links #hh-visitor-counter{
+    display:block;
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    text-align:center;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    line-height:1.35;
+    margin:0;
+  }
+}
+
+
+/* HH HOMEPAGE MOBILE FIX — PASS 3
+   Screenshot-led overrides. CSS only; no content or behaviour changes. */
+@media screen and (max-width:700px){
+  body > header.mast{
+    display:grid!important;
+    grid-template-columns:64px minmax(0,1fr) 64px!important;
+    grid-template-rows:auto auto auto auto!important;
+    gap:8px!important;
+    align-items:center!important;
+    padding:12px 10px 14px!important;
+  }
+  body > header.mast > img.logo{
+    grid-column:1!important;grid-row:1 / span 3!important;
+    width:64px!important;height:64px!important;
+    min-width:0!important;max-width:64px!important;
+  }
+  body > header.mast > .brand{display:contents!important}
+  body > header.mast > .brand h1{
+    grid-column:2!important;grid-row:1!important;
+    min-width:0!important;width:100%!important;
+    font-size:clamp(14px,3.8vw,17px)!important;
+    line-height:1.18!important;overflow-wrap:anywhere!important;
+  }
+  body > header.mast > .brand .rule{
+    grid-column:2!important;grid-row:2!important;
+    width:100%!important;margin:3px 0!important;
+  }
+  body > header.mast > .brand .tag{
+    grid-column:2!important;grid-row:3!important;
+    align-self:start!important;
+    min-width:0!important;font-size:clamp(8px,2.1vw,10px)!important;
+    line-height:1.2!important;overflow-wrap:anywhere!important;
+  }
+  body > header.mast > .brand .sub{display:none!important}
+  body > header.mast > div:last-child{
+    grid-column:3!important;grid-row:1 / span 3!important;
+    min-width:0!important;width:64px!important;
+  }
+  body > header.mast > div:last-child img.portrait{
+    display:block!important;width:64px!important;height:64px!important;
+    max-width:64px!important;
+  }
+  body > header.mast .photo-caption{
+    display:block!important;width:64px!important;max-width:64px!important;
+    position:static!important;left:auto!important;transform:none!important;
+    margin:4px 0 0!important;white-space:normal!important;
+    overflow-wrap:anywhere!important;font-size:7px!important;
+    line-height:1.15!important;text-align:center!important;
+  }
+  body > header.mast .header-feedback{
+    grid-column:1 / -1!important;grid-row:4!important;
+    display:block!important;width:100%!important;max-width:100%!important;
+    min-width:0!important;margin:3px 0 0!important;
+    padding:8px 10px!important;font-size:12px!important;
+    line-height:1.35!important;overflow-wrap:anywhere!important;
+  }
+  body > nav[aria-label="Main ECHS navigation"]{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px 6px!important;padding:12px 10px!important;
+    justify-items:stretch!important;
+  }
+  body > nav[aria-label="Main ECHS navigation"] a{
+    display:block!important;min-width:0!important;
+    width:auto!important;text-align:center!important;
+    white-space:normal!important;overflow-wrap:anywhere!important;
+    font-size:11px!important;line-height:1.25!important;
+    padding:7px 2px!important;
+  }
+  body > nav[aria-label="Main ECHS navigation"] a:last-child{
+    grid-column:1 / -1!important;justify-self:center!important;width:50%!important;
+  }
+  body > footer{
+    display:block!important;padding:20px 14px!important;text-align:center!important;
+  }
+  body > footer > strong{
+    display:block!important;margin:0 0 12px!important;line-height:1.3!important;
+  }
+  body > footer .footer-links{
+    display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+    justify-items:center!important;gap:12px!important;width:100%!important;
+  }
+  body > footer .footer-links > *{
+    display:block!important;width:100%!important;max-width:100%!important;
+    min-width:0!important;text-align:center!important;
+    white-space:normal!important;overflow-wrap:anywhere!important;
+    line-height:1.35!important;margin:0!important;
+  }
+}
+
 </style>
 </head><body>
 <header class="mast">
